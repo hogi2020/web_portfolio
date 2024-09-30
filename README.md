@@ -11,4 +11,6 @@
 
 ### 2. 전체 레이아웃 구성
     - HTML 태그 생성
-    
+    - CSS 파일 생성 | background-color를 통한 영역 구분
+    - fonts.google 활용
+    - 내비게이션 생성
