@@ -73,6 +73,38 @@ nav {
     text-shadow: 0 -1px #07c;
 }
 
+#topMenu > li {
+    float: left;
+    position: relative;  /* 부모요소 relative */
+}
+
+#topMenu > li > ul {
+    display: none;  /* 서브메뉴를 처음에는 감춤 */
+    position: absolute;  /* 서브메뉴 포지셔닝 */
+    width: 160px;
+    background-color: rgba(255, 255, 255, 0.6);
+    left: 20px;
+    margin: 0;
+}
+
+#topMenu > li > ul > li {
+    padding: 10px 10px 10px 30px;  /* 서브메뉴 항목지정 */
+}
+
+#topMenu > li > ul > li > a {
+    font-size: 14px;
+    padding: 10px;
+    color: #000;
+}
+
+#topMenu > li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+
+#topMenu > li > ul > li > a:hover {
+    color: #f00;
+}
 
 #slideShow {
     clear: both;   /* float 해제 */
