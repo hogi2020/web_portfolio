@@ -1,3 +1,6 @@
+/* google font style code */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 * {
     margin: 0;              /* 마진 초기화 */
     padding: 0;             /* 패딩 초기화 */
@@ -24,14 +27,70 @@ header {
     float: left;
     width: 250px;
     height: 100px;
-    background-color: indigo;
+    line-height: 100px;
+    padding-left: 20px;
+}
+a {
+    text-decoration: none;  /* 텍스트의 장식 제거  */
+}
+#logo h1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 300;   /* 폰트 굵기 */
+    font-size: 40px;    /* 폰트 사이즈 */
+    color: #fff;      /* 폰트 색상 */
+    text-shadow: 0 -1px 0 #222; /* 그림자 적용 */
 }
 
 nav {
     float: right;
     width: 900px;
     height: 100px;
-    background-color: green;
+    padding-top: 40px;
+}
+ul {
+    list-style: none;   /* list 구분스타일 제거 */
+}
+#top > li {
+    float: left;
+    position: relative; /*부모 요소 relative*/
+}
+#top > li > a {
+    display: block;
+    padding: 20px 60px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 1px 0 #07c;
+}
+#top > li > a > span {
+    font-size: 0.5em;
+}
+#top > li > a:hover {
+    color: #000;
+    text-shadow: 0 -1px 0 #07c;
+}
+
+#top > li > ul {
+    display: none;
+    position: absolute; /*서브메뉴 포지셔닝*/
+    width: 160px;
+    left: 20px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+#top > li > ul > li {
+    padding: 10px 10px 10px 30px;
+}
+#top > li > ul > li > a {
+    font-size: 14px;
+    padding: 10px;
+    color: #000;
+}
+#top > li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+#top > li > ul > li > a:hover {
+    color: #f00;
 }
 
 
