@@ -1,146 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* google font style code */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-a {
-    text-decoration:none;
-}
-ul {
-    list-style: none;
+    margin: 0;              /* 마진 초기화 */
+    padding: 0;             /* 패딩 초기화 */
+    box-sizing: border-box; /* 박스 사이징은 테두리까지 */
 }
 
 #container {
-    margin:0 auto;
-    width:1200px;
+    margin: auto;
+    width: 1200px;
 }
+
 
 /*********************************/
 /* 헤더 영역 - 로고와 내비게이션 */
 /*********************************/
 
-header{
-    width:100%;
-    height:100px;
-    background-color:#07c;
+header {
+    width: 1200px;
+    height: 100px;
+    background: blue;
 }
 
-
-#logo{
-    float:left;
-    width:250px;
-    height:100px;
-    line-height:100px;
-    padding-left:20px;
+#logo {
+    float: left;
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+}
+a {
+    text-decoration: none;  /* 텍스트의 장식 제거  */
 }
 #logo h1 {
-    font-family:"Bebas Neue", sans-serif;
-    font-weight:500;
-    font-size:50px;
-    color:#fff;
-    text-shadow:0 -1px 0 #222;
+    font-family: "Anton", sans-serif;
+    font-weight: 300;   /* 폰트 굵기 */
+    font-size: 40px;    /* 폰트 사이즈 */
+    color: #fff;      /* 폰트 색상 */
+    text-shadow: 0 -1px 0 #222; /* 그림자 적용 */
 }
 
-/* 내비게이션 */
-nav{
-    float:right;
-    width:900px;
-    height:100px;
-    padding-top:40px;
+nav {
+    float: right;
+    width: 900px;
+    height: 100px;
+    padding-top: 40px;
 }
-#topMenu {
-    height:60px;
+ul {
+    list-style: none;   /* list 구분스타일 제거 */
 }
-#topMenu > li {
-    float:left;
-    position: relative;  /* 부모요소 relative */
+#top > li {
+    float: left;
+    position: relative; /*부모 요소 relative*/
 }
-#topMenu > li > a{
-    display:block;
-    color:#fff;
-    font-weight:600;
-    text-shadow:0 1px #07c;
-    padding:20px 60px;
-}
-#topMenu > li > a > span {
-    font-size : 0.5em;
-}
-#topMenu > li > a:hover {
-    color:#000;
-    text-shadow:0 -1px #07c;
-}
-
-#topMenu > li > ul {
-    display: none;  /* 서브메뉴를 처음에는 감춤 */
-    position:absolute;  /* 서브메뉴 포지셔닝 */
-    width:160px;
-    background:rgba(255,255,255,0.6);
-    left:20px;
-    margin:0;
-}
-#topMenu > li > ul > li {
-    padding:10px 10px 10px 30px;  /* 서브메뉴 항목지정 */
-}
-#topMenu > li > ul > li > a {
-    font-size:14px;
-    padding:10px;
-    color:#000;
-}
-#topMenu > li:hover > ul {
+#top > li > a {
     display: block;
-    z-index:10;
+    padding: 20px 60px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 1px 0 #07c;
 }
-#topMenu > li > ul > li > a:hover {
-    color:#f00;
+#top > li > a > span {
+    font-size: 0.5em;
 }
+#top > li > a:hover {
+    color: #000;
+    text-shadow: 0 -1px 0 #07c;
+}
+
+#top > li > ul {
+    display: none;
+    position: absolute; /*서브메뉴 포지셔닝*/
+    width: 160px;
+    left: 20px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+#top > li > ul > li {
+    padding: 10px 10px 10px 30px;
+}
+#top > li > ul > li > a {
+    font-size: 14px;
+    padding: 10px;
+    color: #000;
+}
+#top > li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+#top > li > ul > li > a:hover {
+    color: #f00;
+}
+
 
 /********************************/
 /*   이미지 슬라이드 쇼 영역    */
 /********************************/
 
-#slideShow {
-    clear:both;   /* float 해제 */
-    width:100%;
-    height:300px;
-    overflow:hidden;   /* 영역 넘치면 감춤 */
+#imageShow {
+    clear: both;    /* 플로팅 해체 */
+    width: 100%;
+    height: 300px;
     position: relative;
 }
 #slides {
     position: absolute;
 }
 #slides > img {
-    width:100%;
-    float:left;
+    width: 100%;
+    float: left;
 }
-
-button{
+button {
     position: absolute;
-    height:100%;
-    top:0;
-    border:none;
-    padding:20px;
-    background-color: transparent;
-    color:#000;
-    font-weight:800;
+    height: 100%;
+    top: 0;
+    border: none;
+    padding: 20px;
+    background-color: transparent;  /*투명한 배경 지정*/
+    color: #000;
+    font-weight: 800;
     font-size: 24px;
-    opacity: 0.5;  /* 화살표 반투명 */
+    opacity: 0.5;
 }
 #prev {
-    left:0;
+    left: 0;
 }
 #next {
-    right:0;
+    right: 0;
 }
 button:hover {
-    background-color:#222;
-    color:#fff;
-    opacity:0.6;
-    cursor:pointer;
+    background-color: #222;
+    opacity: 0.5;       /*불투명도 조정*/
+    color: #fff;
+    cursor: pointer;    /*포인터 모양 변경*/
 }
 button:focus {
-    outline:0;
+    outline: 0;         /*아웃라인 없앰*/
 }
 
 
@@ -148,16 +144,17 @@ button:focus {
 /*   콘텐츠 영역  - 탭 메뉴와 퀵 링크 */
 /**************************************/
 
-#contents{
-    width:100%;
-    height:300px;
-    margin-top:20px;
+#contents {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
 }
 
 #tabMenu {
-    float:left;
-    width:600px;
-    height:100%;
+    float: left;
+    width: 600px;
+    height: 100%;
+    margin-top: 10px;
 }
 #tabMenu input[type="radio"] {
     display: none;
@@ -189,7 +186,6 @@ button:focus {
 .tabContent h2 {
     display: none;
 }
-
 #notice ul {
     list-style: disc;
     margin-left: 30px;
@@ -201,15 +197,11 @@ button:focus {
 #gallery ul li {
     display: inline;
 }
-#tab1:checked ~ #notice, #tab2:checked ~ #gallery {
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery {
     display: block;
 }
-#tabMenu {
-    float: left;
-    width: 600px;
-    height: 100%;
-    margin-top: 10px;
-}
+
 
 #links {
     float: right;
@@ -227,9 +219,9 @@ button:focus {
     text-align: center;
     margin: 10px 0;
 }
-#links ul li a span {
+#links ul li span {
     display: block;
-    margin: 0 auto;
+    margin: auto;
     width: 150px;
     height: 150px;
     border: 1px solid #ddd;
@@ -237,19 +229,24 @@ button:focus {
     line-height: 150px;
 }
 #quick-icon1 {
-    background-image:url('../images/icon-1.jpg')
+    background-image: url(../images/icon-1.jpg);
 }
 #quick-icon2 {
-    background-image:url('../images/icon-2.jpg')
+    background-image: url(../images/icon-2.jpg);
 }
 #quick-icon3 {
-    background-image:url('../images/icon-3.jpg')
+    background-image: url(../images/icon-3.jpg);
 }
-#link ul li a p {
+#links ul li a p {
     margin-top: 15px;
     font-weight: 600;
     color: #666;
 }
+
+
+/******************/
+/*   푸터 영역    */
+/******************/
 
 footer {
     width: 100%;
@@ -272,7 +269,8 @@ footer {
 #bottomMenu ul li:last-child {
     border-right: none;
 }
-#bottomMenu ul li a, #bottomMenu ul li a:visited {
+#bottomMenu ul li a,
+#bottomMenu ul li a:visited {
     font-size: 15px;
     color: #666;
 }
@@ -293,3 +291,5 @@ p {
     font-size: 14px;
     color: #aaa;
 }
+
+
